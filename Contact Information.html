@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kelly's Contact Information</title>
+    <link rel="icon" href="image1.jpg" type="image/png">
+    <style>
+        /* Your CSS styles go here */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            background-size: cover;
+            transition: background-color 0.2s ease;
+        }
+
+
+        #header {
+            background: #50a8a0;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #3498db;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Add your own CSS styles here */
+
+        /* Emoji styles */
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+
+        .nav-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0px;
+            /* Adjust padding as needed */
+            z-index: 100;
+            /* Adjust z-index to ensure it's above other elements */
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust width as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: #09090a;
+            /* Highlight color for buttons */
+            color: rgba(67, 203, 227, 0.722);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.1s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #0c0905;
+            /* Darker color for button overlay */
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: transform 0.3s;
+        }
+
+        .hero-btn:hover::before {
+            transform: scaleX(0);
+            /* Slide out the overlay on hover */
+        }
+
+        .hero-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-btn:hover {
+            background-color: #100d0d;
+            /* Darker highlight color on hover */
+            transform: scale(1.1);
+            transition: transform 0.2s;
+        }
+
+        /* ... (previous CSS code) ... */
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <h1>Welcome to my corner of the web! I'm Kelly, a dedicated and enthusiastic individual who thrives on hard
+                work and the pursuit of knowledge. If you're looking to connect or have a chat, I'm just a click away.
+            </h1>
+        </div>
+        <div class="nav-logo">
+            <img src="image1.jpg" class="logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <a href="Homepage.html" class="hero-btn">Homepage</a>
+                <a href="childhood.html" class="hero-btn">My Childhood</a>
+                <a href="education.html" class="hero-btn">Education</a>
+                <a href="Skills and Talents.html" class="hero-btn">Skills and Talents</a>
+                <a href="Future Aspirations.html" class="hero-btn">Future Aspirations</a>
+                <a href="Contact Information.html" class="hero-btn">Contact</a>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <h2>Email Address</h2>
+            <p id="email">Feel free to reach out via email at (kellmomanyi80@gemail.com), where I'm always open to
+                engaging in
+                interesting conversations.</p>
+            <h2>Social Media Links</h2>
+            <p id="social">For the latest updates and a glimpse into my world, you can also find me on social media.
+                Connect with me on Twitter (@KellyKe29748136) for bite-sized thoughts, or check out my Instagram
+                (@kelly_kevin_momanyi) for a visual journey through my experiences.</p>
+            <h2>Other Relevant Information</h2>
+            <p id="other">Now, let me share a bit about how my life experiences have shaped who I am today. 🌟 My
+                passion for learning and hard work stems from a diverse educational background. I've explored various
+                fields, from science to arts, each contributing to the mosaic of my personality. 🎓 Whether it's delving
+                into the complexities of quantum physics or expressing my creativity through painting, these experiences
+                have molded me into a well-rounded individual.</p>
+        </div>
+    </div>
+    <script>
+        var emails = ["Email 1", "Email 2", "Email 3"];
+        var socials = ["Social Media Link 1", "Social Media Link 2", "Social Media Link 3"];
+        var others = ["Other Information 1", "Other Information 2", "Other Information 3"];
+        document.getElementById("email").innerText += "\n\n" + emails[Math.floor(Math.random() * emails.length)];
+        document.getElementById("social").innerText += "\n\n" + socials[Math.floor(Math.random() * socials.length)];
+        document.getElementById("other").innerText += "\n\n" + others[Math.floor(Math.random() * others.length)];
+        document.body.addEventListener("mousemove", function (event) {
+            var x = event.clientX / window.innerWidth;
+            var y = event.clientY / window.innerHeight;
+            var color = "rgb(" + Math.round(x * 255) + "," + Math.round(y * 255) + ",100)";
+            document.body.style.backgroundColor = color;
+        });
+    </script>
+</body>
+
+</html>

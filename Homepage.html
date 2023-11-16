@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kelly's's Website</title>
+    <link rel="icon" href="image1.jpg" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            ;
+            background-size: cover;
+            transition: background-color 0.2s ease;
+            /* Add smooth transition effect */
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #header {
+            background: #50a8a0;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #header h1 {
+            margin: 0;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        .nav-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0px;
+            /* Adjust padding as needed */
+            z-index: 100;
+            /* Adjust z-index to ensure it's above other elements */
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust width as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: #09090a;
+            /* Highlight color for buttons */
+            color: rgba(67, 203, 227, 0.722);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.1s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #0c0905;
+            /* Darker color for button overlay */
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: transform 0.3s;
+        }
+
+        .hero-btn:hover::before {
+            transform: scaleX(0);
+            /* Slide out the overlay on hover */
+        }
+
+        .hero-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-btn:hover {
+            background-color: #100d0d;
+            /* Darker highlight color on hover */
+            transform: scale(1.1);
+            transition: transform 0.2s;
+        }
+
+        /* ... (previous CSS code) ... */
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <h1 id="greeting">Welcome to My Personal Website!</h1>
+        </div>
+        <div class="nav-logo">
+            <img src="image1.jpg" class="logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <a href="Homepage.html" class="hero-btn">Homepage</a>
+                <a href="childhood.html" class="hero-btn">My Childhood</a>
+                <a href="education.html" class="hero-btn">Education</a>
+                <a href="Skills and Talents.html" class="hero-btn">Skills and Talents</a>
+                <a href="Future Aspirations.html" class="hero-btn">Future Aspirations</a>
+                <a href="Contact Information.html" class="hero-btn">Contact</a>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <h2 style="color: #3498db; font-size: 2em;">🚀 Embark on the Epic Journey with Kelly Kevin 🚀</h2>
+            <p style="font-style: italic; color: #2ecc71;">Greetings, future trailblazers! 🌟 I'm Kelly Kevin, a proud
+                student at
+                Zetech University, navigating an exhilarating odyssey through the captivating realms of tech and
+                innovation. My
+                mission? To conquer the IT universe and unleash my boundless creativity to the max!</p>
+
+            <h2 style="color: #e74c3c; font-size: 2em;">✨ Dive into My Tech Wonderland ✨</h2>
+            <p style="color: #f39c12;">Feel the electrifying pulse of cutting-edge tech as I dive deep into the
+                mesmerizing
+                world of IT at Zetech University. 💻 Let's explore together and discover the endless possibilities that
+                await in
+                the digital frontier!</p>
+
+            <h2 style="color: #8e44ad; font-size: 2em;">🎯 Conquering Peaks and Unleashing Creativity 🎨</h2>
+            <p style="color: #d35400;">Join me on this mission to ascend the peaks of success in the IT and tech
+                landscape
+                like a rocket launched from Zetech University! 🚀 But that's not all — I'm also crafting a symphony of
+                creativity, with goals to unleash imaginative wonders upon the world. 🌟 Get ready for a thrilling ride!
+            </p>
+        </div>
+
+
+    </div>
+    <script>
+        function initializePage() {
+            // Ask the user for their name
+            var userName = prompt("What's your name?");
+            var today = new Date();
+            var hour = today.getHours();
+            var greeting;
+
+            if (userName) {
+                // If the user provided a name, use a personalized greeting
+                greeting = `Hello ${userName}! `;
+            } else {
+                // If no name is provided, use a generic greeting
+                greeting = "Greatings! ";
+            }
+
+            // Combine with time-based greetings
+            if (hour < 12) {
+                greeting += "Good morning! Welcome to my personal website!";
+            } else if (hour < 18) {
+                greeting += "Good afternoon! Welcome to my personal website!";
+            } else {
+                greeting += "Good evening! Welcome to my personal website!";
+            }
+
+
+            // Update the content of the element with the id "greeting" to display the personalized greeting
+            document.getElementById("greeting").innerText = greeting;
+
+            // Add a dynamic background color change
+            document.body.addEventListener("mousemove", function (event) {
+                var x = event.clientX / window.innerWidth;
+                var y = event.clientY / window.innerHeight;
+                var color = "rgb(" + Math.round(x * 255) + "," + Math.round(y * 255) + ",100)";
+                document.body.style.backgroundColor = color;
+            });
+        }
+
+        // Call the function when the page loads
+        window.onload = initializePage;
+    </script>
+</body>
+
+</html>

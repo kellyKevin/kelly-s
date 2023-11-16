@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kelly's Future Aspirations</title>
+    <link rel="icon" href="image1.jpg" type="image/png">
+    <style>
+        /* Your CSS styles go here */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            background-size: cover;
+            transition: background-color 0.2s ease;
+        }
+
+
+        #header {
+            background: #50a8a0;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #3498db;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Add your own CSS styles here */
+
+        /* Emoji styles */
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+
+        .nav-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0px;
+            /* Adjust padding as needed */
+            z-index: 100;
+            /* Adjust z-index to ensure it's above other elements */
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust width as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: #09090a;
+            /* Highlight color for buttons */
+            color: rgba(67, 203, 227, 0.722);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.1s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #0c0905;
+            /* Darker color for button overlay */
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: transform 0.3s;
+        }
+
+        .hero-btn:hover::before {
+            transform: scaleX(0);
+            /* Slide out the overlay on hover */
+        }
+
+        .hero-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-btn:hover {
+            background-color: #100d0d;
+            /* Darker highlight color on hover */
+            transform: scale(1.1);
+            transition: transform 0.2s;
+        }
+
+        /* ... (previous CSS code) ... */
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <h1>My Future Aspirations</h1>
+        </div>
+        <div class="nav-logo">
+            <img src="image1.jpg" class="logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <a href="Homepage.html" class="hero-btn">Homepage</a>
+                <a href="childhood.html" class="hero-btn">My Childhood</a>
+                <a href="education.html" class="hero-btn">Education</a>
+                <a href="Skills and Talents.html" class="hero-btn">Skills and Talents</a>
+                <a href="Future Aspirations.html" class="hero-btn">Future Aspirations</a>
+                <a href="Contact Information.html" class="hero-btn">Contact</a>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <h2>Career Goals</h2>
+            <p id="career">My dream is to delve into the realm of artificial intelligence and contribute to
+                groundbreaking advancements that redefine how we perceive and interact with technology.</p>
+            <h2>Aspirations</h2>
+            <p id="aspiration">Currently, I am deeply engrossed in a captivating project that involves developing
+                cutting-edge algorithms for natural language processing. This project not only sharpens my technical
+                skills but also fosters a profound understanding of the intricate nuances of human communication.</p>
+            <h2>Dreams</h2>
+            <p id="dream">As I accelerate towards my future aspirations, I am driven by an unwavering enthusiasm to
+                explore the uncharted territories of technology. The thrill of the unknown beckons me, and I am eager to
+                contribute my skills and passion to a world that is constantly evolving.</p>
+        </div>
+    </div>
+    <script>
+        var careers = ["Career Goal 1", "Career Goal 2", "Career Goal 3"];
+        var aspirations = ["Aspiration 1", "Aspiration 2", "Aspiration 3"];
+        var dreams = ["Dream 1", "Dream 2", "Dream 3"];
+        document.getElementById("career").innerText += "\n\n" + careers[Math.floor(Math.random() * careers.length)];
+        document.getElementById("aspiration").innerText += "\n\n" + aspirations[Math.floor(Math.random() * aspirations.length)];
+        document.getElementById("dream").innerText += "\n\n" + dreams[Math.floor(Math.random() * dreams.length)];
+        document.body.addEventListener("mousemove", function (event) {
+            var x = event.clientX / window.innerWidth;
+            var y = event.clientY / window.innerHeight;
+            var color = "rgb(" + Math.round(x * 255) + "," + Math.round(y * 255) + ",100)";
+            document.body.style.backgroundColor = color;
+        });
+    </script>
+</body>
+
+</html>

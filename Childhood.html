@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kelly's Childhood</title>
+    <link rel="icon" href="image1.jpg" type="image/png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            background-size: cover;
+            transition: background-color 0.2s ease;
+        }
+
+
+        #header {
+            background: #50a8a0;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #3498db;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Add your own CSS styles here */
+
+        /* Emoji styles */
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+
+        .nav-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0px;
+            /* Adjust padding as needed */
+            z-index: 100;
+            /* Adjust z-index to ensure it's above other elements */
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust width as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: #09090a;
+            /* Highlight color for buttons */
+            color: rgba(67, 203, 227, 0.722);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.1s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #0c0905;
+            /* Darker color for button overlay */
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: transform 0.3s;
+        }
+
+        .hero-btn:hover::before {
+            transform: scaleX(0);
+            /* Slide out the overlay on hover */
+        }
+
+        .hero-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-btn:hover {
+            background-color: #100d0d;
+            /* Darker highlight color on hover */
+            transform: scale(1.1);
+            transition: transform 0.2s;
+        }
+
+        /* ... (previous CSS code) ... */
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <h1>My Childhood</h1>
+        </div>
+        <div class="nav-logo">
+            <img src="image1.jpg" class="logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <a href="Homepage.html" class="hero-btn">Homepage</a>
+                <a href="childhood.html" class="hero-btn">My Childhood</a>
+                <a href="education.html" class="hero-btn">Education</a>
+                <a href="Skills and Talents.html" class="hero-btn">Skills and Talents</a>
+                <a href="Future Aspirations.html" class="hero-btn">Future Aspirations</a>
+                <a href="Contact Information.html" class="hero-btn">Contact</a>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <h2>Memorable Experiences</h2>
+            <p id="experience">In the tapestry of my childhood, vibrant threads of laughter, discovery, and boundless
+                curiosity weave together to create a narrative that has profoundly shaped who I am today. As I reflect
+                on those formative years, I find myself immersed in a symphony of memories, each note resonating with
+                the essence of my upbringing. 🌈</p>
+            <h2>Family Interactions</h2>
+            <p id="family">I was fortunate to be surrounded by a family that fostered an environment of love and
+                exploration. In the heart of our home, the kitchen, I discovered the magic of culinary artistry
+                alongside my parents. The tantalizing aromas, the sizzle of ingredients in the pan – these sensory
+                experiences not only ignited my passion for cooking but also taught me the importance of creativity and
+                collaboration. 👩‍🍳</p>
+            <h2>Formative Moments</h2>
+            <p id="moments">From the collaborative chaos of family game nights to the quiet introspection of stargazing
+                with my parents, these experiences laid the foundation for my personality. I emerged from my childhood
+                cocoon with a zest for exploration, an insatiable curiosity about the world, and a deep appreciation for
+                the bonds that tie us together. 🚀</p>
+        </div>
+    </div>
+    <script>
+        var experiences = ["🌟 Adventure-filled vacation", "🚲 Learning to ride a bike", "🎨 Discovering a love for painting"];
+        var families = ["🍲 Cooking together as a family", "🎲 Family game nights", "🌌 Stargazing under the night sky"];
+        var moments = ["🚀 Setting life goals", "📚 Falling in love with books", "🎭 Participating in school plays"];
+        document.getElementById("experience").innerText += "\n\n" + experiences[Math.floor(Math.random() * experiences.length)];
+        document.getElementById("family").innerText += "\n\n" + families[Math.floor(Math.random() * families.length)];
+        document.getElementById("moments").innerText += "\n\n" + moments[Math.floor(Math.random() * moments.length)];
+        document.body.addEventListener("mousemove", function (event) {
+            var x = event.clientX / window.innerWidth;
+            var y = event.clientY / window.innerHeight;
+            var color = "rgb(" + Math.round(x * 255) + "," + Math.round(y * 255) + ",100)";
+            document.body.style.backgroundColor = color;
+        });
+    </script>
+</body>
+
+</html>

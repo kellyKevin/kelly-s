@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kelly's Skills and Talents</title>
+    <link rel="icon" href="image1.jpg" type="image/png">
+    <style>
+        /* Your CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            ;
+            background-size: cover;
+            transition: background-color 0.2s ease;
+            /* Add smooth transition effect */
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #header {
+            background: #50a8a0;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #header h1 {
+            margin: 0;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        .nav-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0px;
+            /* Adjust padding as needed */
+            z-index: 100;
+            /* Adjust z-index to ensure it's above other elements */
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust width as needed */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: #09090a;
+            /* Highlight color for buttons */
+            color: rgba(67, 203, 227, 0.722);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.1s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #0c0905;
+            /* Darker color for button overlay */
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: transform 0.3s;
+        }
+
+        .hero-btn:hover::before {
+            transform: scaleX(0);
+            /* Slide out the overlay on hover */
+        }
+
+        .hero-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-btn:hover {
+            background-color: #100d0d;
+            /* Darker highlight color on hover */
+            transform: scale(1.1);
+            transition: transform 0.2s;
+        }
+
+        /* ... (previous CSS code) ... */
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <h1>Welcome to the vibrant world of Kelly—a dynamic individual fueled by a passion for learning and an
+                unwavering commitment to personal and professional growth! 🌟</h1>
+        </div>
+        <div class="nav-logo">
+            <img src="image1.jpg" class="logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <a href="Homepage.html" class="hero-btn">Homepage</a>
+                <a href="childhood.html" class="hero-btn">My Childhood</a>
+                <a href="education.html" class="hero-btn">Education</a>
+                <a href="Skills and Talents.html" class="hero-btn">Skills and Talents</a>
+                <a href="Future Aspirations.html" class="hero-btn">Future Aspirations</a>
+                <a href="Contact Information.html" class="hero-btn">Contact</a>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <h2>Skills</h2>
+            <p id="skill">From mastering coding languages to creating captivating digital art, Kelly excels in both the
+                analytical and creative realms. 🎨💻 The ability to navigate this spectrum of skills not only showcases
+                versatility but also reflects a keen curiosity that constantly drives Kelly to explore new horizons.</p>
+            <h2>Talents</h2>
+            <p id="talent">Education has been a cornerstone of Kelly's development, serving as a launchpad for knowledge
+                acquisition and skill refinement. 🎓 Each academic milestone, coupled with real-world application, has
+                contributed to a holistic understanding of various subjects. The fusion of theoretical foundations and
+                practical experiences has shaped Kelly's professional trajectory, fostering a capacity for innovation
+                and problem-solving.</p>
+            <h2>Hobbies</h2>
+            <p id="hobby">Beyond the technical prowess, Kelly's personality shines through—a testament to the influence
+                of diverse hobbies. 🌈 The love for adventure sports injects an adrenaline rush into life, while the
+                dedication to community service reflects a compassionate soul. The use of emojis adds a playful touch,
+                mirroring Kelly's approachable and friendly demeanor.</p>
+        </div>
+    </div>
+    <script>
+        var skills = ["Skill 1", "Skill 2", "Skill 3"];
+        var talents = ["Talent 1", "Talent 2", "Talent 3"];
+        var hobbies = ["Hobby 1", "Hobby 2", "Hobby 3"];
+        document.getElementById("skill").innerText += "\n\n" + skills[Math.floor(Math.random() * skills.length)];
+        document.getElementById("talent").innerText += "\n\n" + talents[Math.floor(Math.random() * talents.length)];
+        document.getElementById("hobby").innerText += "\n\n" + hobbies[Math.floor(Math.random() * hobbies.length)];
+        document.body.addEventListener("mousemove", function (event) {
+            var x = event.clientX / window.innerWidth;
+            var y = event.clientY / window.innerHeight;
+            var color = "rgb(" + Math.round(x * 255) + "," + Math.round(y * 255) + ",100)";
+            document.body.style.backgroundColor = color;
+        });
+    </script>
+</body>
+
+</html>
